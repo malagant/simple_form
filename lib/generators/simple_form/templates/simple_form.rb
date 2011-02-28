@@ -19,6 +19,9 @@ SimpleForm.setup do |config|
   # Method used to tidy up errors.
   # config.error_method = :first
 
+  # Default class used on errors in inputs.
+  # config.input_error_class = :error
+
   # Default tag used for error notification helper.
   # config.error_notification_tag = :p
 

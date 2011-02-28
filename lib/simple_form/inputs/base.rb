@@ -44,7 +44,7 @@ module SimpleForm
 
       def input_html_classes
         classes = [input_type, required_class]
-        classes << SimpleForm.input_error_class if @column
+        classes << SimpleForm.input_error_class if has_errors?
         classes
       end
 
