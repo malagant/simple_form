@@ -12,7 +12,11 @@ module SimpleForm
       end
 
       def error_text
-        errors.send(error_method)
+        if error_method
+          errors.send(error_method)
+        else
+          ""
+        end
       end
 
       def error_method
@@ -23,7 +27,7 @@ module SimpleForm
         html_options_for(:error, [SimpleForm.error_class])
       end
 
-    protected
+      protected
 
       def errors
         @errors ||= (errors_on_attribute + errors_on_association).compact

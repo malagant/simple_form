@@ -27,6 +27,10 @@ module SimpleForm
   mattr_accessor :error_class
   @@error_class = :error
 
+  # CSS class to add to all inputs with error tags.
+  mattr_accessor :input_error_class
+  @@input_error_class = :error
+
   # Method used to tidy up errors.
   mattr_accessor :error_method
   @@error_method = :first
